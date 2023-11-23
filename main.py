@@ -11,7 +11,7 @@ if "messages" not in st.session_state.keys(): # Initialize the chat message hist
     st.session_state.messages = [
         {"role": "assistant", "content": "Ask me a question about Streamlit's open-source Python library!"}
     ]
-@st.cache_resource(show_spinner=False)
+#st.cache_resource(show_spinner=False)
 def load_data():
     with st.spinner(text="Loading and indexing the Streamlit docs – hang tight! This should take 1-2 minutes."):
         reader = SimpleDirectoryReader(input_dir="./data", recursive=True)
